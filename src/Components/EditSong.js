@@ -38,7 +38,7 @@ function EditSong() {
   };
 
   useEffect(() => {
-    axios.get(`${API}/SONGs/${id}`).then(
+    axios.get(`${API}/songs/${id}`).then(
       (response) => setEdit(response.data),
       (error) => navigate(`/not-found`)
     );
@@ -96,7 +96,7 @@ function EditSong() {
 
         <input type="submit" />
       </form>
-      <Link to={`/bookmarks/${id}`}>
+      <Link to={`/songs/${id}`}>
         <button>Nevermind!</button>
       </Link>
     </div>
